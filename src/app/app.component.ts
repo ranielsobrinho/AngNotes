@@ -62,7 +62,7 @@ export class AppComponent {
     }
   }
   // Swipe modes
-  changeMode(mode): any {
+  changeMode(mode: string): any {
     this.mode = mode;
   }
 }
