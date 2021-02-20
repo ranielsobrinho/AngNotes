@@ -1,8 +1,8 @@
 <h1 class="title">{{ title }}</h1>
-<ul *ngIf="mode=='list">
+<ul *ngIf="mode=='list'">
   <p *ngIf = "notes.length === 0">Sem anotações</p>
   <li *ngFor = "let note of notes">
-    <p>{{notes.content}}</p>
+    <p>{{note.content}}</p>
     <button (click)="remove(note)">Remover</button>
   </li>
 </ul>
