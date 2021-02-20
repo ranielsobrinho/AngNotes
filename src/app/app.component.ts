@@ -26,7 +26,7 @@ export class AppComponent {
     this.load();
   }
 
-  //Add new note
+  // Add new note
   add(): void {
     const content = this.form.controls.content.value;
     const id = this.notes.length + 1;
@@ -34,11 +34,11 @@ export class AppComponent {
     this.save();
     this.clear();
   }
-  //Clear the form
+  // Clear the form
   clear(): void {
     this.form.reset();
   }
-  //Remove note
+  // Remove note
   remove(note: Note): void {
     const index = this.notes.indexOf(note);
     if (index !== -1){
@@ -46,13 +46,13 @@ export class AppComponent {
       this.save();
     }
   }
-  //Saving on localstorage
+  // Saving on localstorage
   save(): void {
     const data = JSON.stringify(this.notes);
     localStorage.setItem('notes', data);
     this.mode = 'list';
   }
-  //Loading notes list
+  // Loading notes list
   load(): any {
     const data = localStorage.getItem('notes');
     if (data) {
@@ -61,7 +61,7 @@ export class AppComponent {
       this.notes = [];
     }
   }
-  //Swipe modes
+  // Swipe modes
   changeMode(mode): any {
     this.mode = mode;
   }
