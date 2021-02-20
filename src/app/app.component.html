@@ -1,8 +1,24 @@
 <h1 class="title">{{ title }}</h1>
-<ul>
-  <p *ngIf="notes.length === 0">Sem anotações</p>
+<ul *ngIf="mode=='list">
+  <p *ngIf = "notes.length === 0">Sem anotações</p>
   <li *ngFor = "let note of notes">
     <p>{{notes.content}}</p>
     <button (click)="remove(note)">Remover</button>
   </li>
 </ul>
+
+<div *ngIf="mode=='add'">
+  <h1>Nova Anotação</h1>
+  <form [formGroup] = "form">
+    <input type="text" placeholder="Insira uma anotação" maxlength="60" formControlName="content" autofocus>
+    <small *ngIf= "form.controls.content.invalid && !form.controls.content.pristine">*Este campo deve ter entre 10 e 60 caracteres</small>
+    <button [disabled]="form.invalid" (click)="add()">Adicionar</button>
+  </form>
+</div>
+
+<button (click)="changeMode('add')" *ngIf="mode=='list'">
+  NOVA ANOTAÇÂO
+</button>
+<button (click)="changeMode('list')" *ngIf="mode=='add'">
+  CANCELAR
+</button>
