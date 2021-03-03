@@ -1,4 +1,5 @@
 <h1 class="title">{{ title }}</h1>
+<div class="containerList">
 <ul *ngIf="mode=='list'">
   <p *ngIf = "notes.length === 0">Sem anotações</p>
   <li *ngFor = "let note of notes">
@@ -7,8 +8,8 @@
     <button (click)="remove(note)">Remover</button>
   </li>
 </ul>
-
-<div *ngIf="mode=='add'">
+</div>
+<div *ngIf="mode=='add'" class="containerNewNote">
   <h1>Nova Anotação</h1>
   <form [formGroup] = "form">
     <label for="title">Title:</label>
