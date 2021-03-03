@@ -16,9 +16,14 @@ export class AppComponent {
 
   constructor(private fb: FormBuilder) {
     this.form = this.fb.group({
-      content: ['', Validators.compose([
+      title: ['', Validators.compose([
         Validators.minLength(10),
         Validators.maxLength(60),
+        Validators.required
+      ])],
+      content: ['', Validators.compose([
+        Validators.minLength(10),
+        Validators.maxLength(90),
         Validators.required
       ])]
     });
@@ -27,10 +32,11 @@ export class AppComponent {
   }
 
   // Add new note
-  add(): void {
-    const content = this.form.controls.content.value;
-    const id = this.notes.length + 1;
-    this.notes.push(new Note(id, content));
+  add(): any {
+    const content: string = this.form.controls.content.value;
+    const title: string = this.form.controls.title.value;
+    const id: number = this.notes.length + 1;
+    this.notes.push(new Note(id, title, content));
     this.save();
     this.clear();
   }
