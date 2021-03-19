@@ -11,3 +11,8 @@
 .input{
     width: 500px;
 }
+
+app-note-card{
+    display: block;
+    margin-bottom: 10px;
+}
