@@ -9,13 +9,15 @@ import { NotesListComponent } from './pages/notes-list/notes-list.component';
 import { MainLayoutComponent } from './pages/main-layout/main-layout.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NoteCardComponent } from './note-card/note-card.component';
+import { NoteDetailsComponent } from './pages/note-details/note-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NotesListComponent,
     MainLayoutComponent,
-    NoteCardComponent
+    NoteCardComponent,
+    NoteDetailsComponent
   ],
   imports: [
     BrowserModule,
