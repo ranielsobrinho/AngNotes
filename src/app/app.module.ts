@@ -10,6 +10,7 @@ import { MainLayoutComponent } from './pages/main-layout/main-layout.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NoteCardComponent } from './note-card/note-card.component';
 import { NoteDetailsComponent } from './pages/note-details/note-details.component';
+import { MaterialModule } from './material/material.module';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { NoteDetailsComponent } from './pages/note-details/note-details.componen
     AppRoutingModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
