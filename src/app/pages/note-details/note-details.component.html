@@ -1,25 +1,26 @@
 <div class="form-container">
-    <form #noteForm="ngForm" >
+    <form [formGroup]= "form">
         <div class="field">
-            <label class="label">Title</label>
+            <label for="title" class="label">Title</label>
             <div class="control">
-                <input type="text" class="input">
+                <input type="text" name="title" class="input" formControlName="title">
             </div>
         </div>
-
+        <!-- ?<small *ngIf="form.controls.title.invalid && !form.controls.title.pristine" class="danger">*Este campo deve conter entre 3 e 45 caracteres</small> -->
         <div class="field">
             <label class="label">Body</label>
             <div class="control">
-                <textarea class="textarea"></textarea>
+                <textarea class="textarea" formControlName="body"></textarea>
             </div>
         </div>
+
         <div>
             <div class="cancelButton">
                 <button class="button" type="button">Cancelar</button>
             </div>
 
             <div class="saveButton">
-                <button class="button" type="submit">Salvar</button>
+                <button class="button" type="submit" [disabled]="form.invalid">Salvar</button>
             </div>
         </div>
     </form>
