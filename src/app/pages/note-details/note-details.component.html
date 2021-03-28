@@ -1,5 +1,5 @@
 <div class="form-container">
-    <form>
+    <form #noteForm="ngForm" >
         <div class="field">
             <label class="label">Title</label>
             <div class="control">
@@ -11,6 +11,15 @@
             <label class="label">Body</label>
             <div class="control">
                 <textarea class="textarea"></textarea>
+            </div>
+        </div>
+        <div>
+            <div class="cancelButton">
+                <button class="button" type="button">Cancelar</button>
+            </div>
+
+            <div class="saveButton">
+                <button class="button" type="submit">Salvar</button>
             </div>
         </div>
     </form>
