@@ -25,7 +25,7 @@ import { MaterialModule } from './material/material.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    FontAwesomeModule,
+    FontAwesomeModule, // !Retirar o fontawesome do projeto
     MaterialModule
   ],
   providers: [],
