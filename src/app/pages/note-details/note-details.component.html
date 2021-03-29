@@ -1,27 +1,12 @@
-<div class="form-container">
-    <form [formGroup]= "form">
-        <div class="field">
-            <label for="title" class="label">Title</label>
-            <div class="control">
-                <input type="text" name="title" class="input" formControlName="title">
-            </div>
-        </div>
-        <!-- ?<small *ngIf="form.controls.title.invalid && !form.controls.title.pristine" class="danger">*Este campo deve conter entre 3 e 45 caracteres</small> -->
-        <div class="field">
-            <label class="label">Body</label>
-            <div class="control">
-                <textarea class="textarea" formControlName="body"></textarea>
-            </div>
-        </div>
-
-        <div>
-            <div class="cancelButton">
-                <button class="button" type="button">Cancelar</button>
-            </div>
-
-            <div class="saveButton">
-                <button class="button" type="submit" [disabled]="form.invalid">Salvar</button>
-            </div>
-        </div>
-    </form>
-</div>
+<form [formGroup]= "form">
+    <mat-form-field appearance="fill">
+        <mat-label>Title</mat-label>
+        <input type="text" matInput formControlName="title">
+    </mat-form-field>
+            <!-- ?<small *ngIf="form.controls.title.invalid && !form.controls.title.pristine" class="danger">*Este campo deve conter entre 3 e 45 caracteres</small> -->
+    <mat-form-field appearance="fill">
+        <mat-label>Note</mat-label>
+        <textarea matInput formControlName="body"></textarea>
+    </mat-form-field>
+    
+</form>
