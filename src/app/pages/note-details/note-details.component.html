@@ -1,12 +1,15 @@
 <form [formGroup]= "form">
+
     <mat-form-field appearance="fill">
         <mat-label>Title</mat-label>
         <input type="text" matInput formControlName="title">
+        <mat-hint align="end">Mínimo 3 letras</mat-hint>
     </mat-form-field>
-            <!-- ?<small *ngIf="form.controls.title.invalid && !form.controls.title.pristine" class="danger">*Este campo deve conter entre 3 e 45 caracteres</small> -->
+
     <mat-form-field appearance="fill">
         <mat-label>Note</mat-label>
         <textarea matInput formControlName="body"></textarea>
+        <mat-hint align="end">Mínimo 10 letras</mat-hint>
     </mat-form-field>
     
 </form>
