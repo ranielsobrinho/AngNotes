@@ -1,4 +1,5 @@
 <h1 mat-dialog-title>Nova Anotação</h1>
+
 <div mat-dialog-content>
   <form [formGroup]= "form">
 
@@ -14,9 +15,10 @@
         <mat-hint align="end">Mínimo 10 letras</mat-hint>
     </mat-form-field>
     
-</form>
+  </form>
 </div>
+
 <div mat-dialog-actions>
-  <button mat-button (click)="cancel()">Cancelar</button>
-  <button mat-button cdkFocusInitial>Ok</button>
+  <button mat-button (click)="cancel()" color="warn">Cancelar</button>
+  <button mat-button (click)="addNote()" cdkFocusInitial color="accent">Ok</button>
 </div>
