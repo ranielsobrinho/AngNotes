@@ -1,10 +1,20 @@
-<h1 mat-dialog-title>Hi Raniel</h1>
+<h1 mat-dialog-title>Nova Anotação</h1>
 <div mat-dialog-content>
-  <p>What's your favorite animal?</p>
-  <mat-form-field>
-    <mat-label>Favorite Animal</mat-label>
-    <input matInput>
-  </mat-form-field>
+  <form [formGroup]= "form">
+
+    <mat-form-field class="mat-inputs">
+        <mat-label>Título</mat-label>
+        <input type="text" matInput formControlName="title">
+        <mat-hint align="end">Mínimo 3 letras</mat-hint>
+    </mat-form-field>
+
+    <mat-form-field class="mat-inputs">
+        <mat-label>Anotação</mat-label>
+        <textarea matInput formControlName="body"></textarea>
+        <mat-hint align="end">Mínimo 10 letras</mat-hint>
+    </mat-form-field>
+    
+</form>
 </div>
 <div mat-dialog-actions>
   <button mat-button (click)="cancel()">Cancelar</button>
