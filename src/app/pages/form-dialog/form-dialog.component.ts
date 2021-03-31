@@ -12,7 +12,7 @@ export class FormDialogComponent implements OnInit {
   public form: FormGroup;
 
   constructor(public dialogRef: MatDialogRef<FormDialogComponent>,
-              private fb: FormBuilder) { 
+              private fb: FormBuilder) {
                 this.form = this.fb.group({
                   title: ['', Validators.compose([
                     Validators.minLength(3),
@@ -32,6 +32,13 @@ export class FormDialogComponent implements OnInit {
 
   cancel(): void {
     this.dialogRef.close();
+    this.form.reset();
+  }
+
+  addNote(): void {
+    console.log('Note added');
+    this.dialogRef.close();
+    this.form.reset();
   }
 
 }
