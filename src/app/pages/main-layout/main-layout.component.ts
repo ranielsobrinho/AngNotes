@@ -17,12 +17,7 @@ export class MainLayoutComponent implements OnInit {
 
   addNote(): void {
     const dialogRef = this.dialog.open(FormDialogComponent, {
-      width: '250px',
-    });
-
-    // tslint:disable-next-line: deprecation
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
+      minWidth: '400px',
     });
   }
 
