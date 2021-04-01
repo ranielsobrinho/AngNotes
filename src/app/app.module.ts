@@ -7,11 +7,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NotesListComponent } from './pages/notes-list/notes-list.component';
 import { MainLayoutComponent } from './pages/main-layout/main-layout.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { NoteCardComponent } from './note-card/note-card.component';
 import { NoteDetailsComponent } from './pages/note-details/note-details.component';
-import { MaterialModule } from './material/material.module';
 import { FormDialogComponent } from './pages/form-dialog/form-dialog.component';
+import { MaterialModule } from './material.module';
 
 @NgModule({
   declarations: [
@@ -27,7 +26,6 @@ import { FormDialogComponent } from './pages/form-dialog/form-dialog.component';
     AppRoutingModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
-    FontAwesomeModule, // !Retirar o fontawesome do projeto
     MaterialModule
   ],
   providers: [],
