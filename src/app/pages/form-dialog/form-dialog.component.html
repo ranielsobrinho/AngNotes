@@ -1,4 +1,4 @@
-<h1 mat-dialog-title>Nova Anotação</h1>
+<h1 mat-dialog-title>Nova Anotação <mat-icon>assignment_turned_in</mat-icon></h1>
 
 <div mat-dialog-content>
   <form [formGroup]= "form">
@@ -20,5 +20,5 @@
 
 <div mat-dialog-actions>
   <button mat-button (click)="cancel()" color="warn">Cancelar</button>
-  <button mat-button (click)="addNote()" cdkFocusInitial color="accent">Ok</button>
+  <button mat-button (click)="addNote()" color="accent" [disabled]="form.invalid">Ok</button>
 </div>
