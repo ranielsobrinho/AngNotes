@@ -1,26 +1,11 @@
-<div #container class="note-card-container">
-    <div class="note-card-content">
-        <h1 class="note-card-title">{{ title }}</h1>
-
-        <div class="note-card-body">
-            <p>{{ body }}</p>
-        </div>
-    </div>
-    <div class="x-button"></div>
-</div>
-<!-- TODO: Mudar para o material card 
-    <mat-card class="example-card">
-    <mat-card-header>
-      <div mat-card-avatar class="example-header-image"></div>
-      <mat-card-title>{{ title }}</mat-card-title>
-    </mat-card-header>
-    <mat-card-content>
-      <p>
-        {{ body }}
-      </p>
-    </mat-card-content>
-    <mat-card-actions>
-        <div mat-button class="x-button"></div>
-    </mat-card-actions>
-  </mat-card>
-   -->
+<mat-card class="note-card-container">
+  <mat-card-header>
+    <mat-card-title>{{ title }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <p>
+      {{ body }}
+    </p>
+  </mat-card-content>
+  <div mat-button class="x-button"></div>
+</mat-card>
