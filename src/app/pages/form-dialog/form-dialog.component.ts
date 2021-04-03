@@ -23,7 +23,7 @@ export class FormDialogComponent implements OnInit {
                   ])],
                   body: ['', Validators.compose([
                     Validators.minLength(10),
-                    Validators.maxLength(90),
+                    Validators.maxLength(300),
                     Validators.required
                   ])]
                 });
