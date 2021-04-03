@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { NotesService } from 'src/app/shared/notes.service';
 
 @Component({
   selector: 'app-form-dialog',
@@ -12,7 +13,8 @@ export class FormDialogComponent implements OnInit {
   public form: FormGroup;
 
   constructor(public dialogRef: MatDialogRef<FormDialogComponent>,
-              private fb: FormBuilder) {
+              private fb: FormBuilder,
+              private notesService: NotesService) {
                 this.form = this.fb.group({
                   title: ['', Validators.compose([
                     Validators.minLength(3),
@@ -35,8 +37,10 @@ export class FormDialogComponent implements OnInit {
     this.form.reset();
   }
 
-  addNote(): void {
-    console.log('Note added');
+  addNote(): any {
+    const title = this.form.controls.title.value;
+    const body = this.form.controls.body.value;
+    this.notesService.add(title, body);
     this.dialogRef.close();
     this.form.reset();
   }
