@@ -6,7 +6,7 @@ import { Note } from 'src/models/notes.model';
 })
 export class NotesService {
 
-  notes: Note[] = new Array<Note>();
+  public notes: Note[] = [];
 
   constructor() { }
 
@@ -18,9 +18,13 @@ export class NotesService {
     return this.notes.indexOf(note);
   }
 
-  add(note: Note): any {
+  getAll(): any {
+    return this.notes;
+  }
+
+  add(title: string, body: string): any {
     // save a note in the array and returns the id of the note
-    const newLength = this.notes.push(note);
+    const newLength = this.notes.push(new Note(title, body));
     const index = newLength - 1;
     return index;
   }
