@@ -2,6 +2,8 @@
     flex: 1 1 auto;
 }
 .layout-box{
+    display: flex;
+    flex-direction: column;
     height: 100%;
 
     overflow: hidden;
@@ -21,5 +23,5 @@ mat-toolbar{
 .page-content{
     display: flex;
     flex-direction: column;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
