@@ -1,6 +1,5 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
-import { setClassMetadata } from '@angular/core/src/r3_symbols';
 import { NotesService } from 'src/app/shared/notes.service';
 import { Note } from 'src/models/notes.model';
 
