@@ -1,0 +1,20 @@
+<h1>Alterar Anotação <mat-icon>assignment_turned_in</mat-icon></h1>
+
+  <form [formGroup]= "form">
+
+    <mat-form-field appearance="fill">
+        <mat-label>Título</mat-label>
+        <input type="text" matInput formControlName="title">
+      </mat-form-field>
+    
+      <mat-form-field appearance="fill">
+        <mat-label>Anotação</mat-label>
+        <textarea matInput formControlName="body"></textarea>
+      </mat-form-field>
+    
+  </form>
+
+<div>
+  <button mat-stroked-button routerLink="/" color="warn">Cancelar</button>
+  <button mat-raised-button (click)="updateNote()" color="accent" [disabled]="form.invalid">Ok</button>
+</div>
