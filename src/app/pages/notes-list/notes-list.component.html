@@ -9,6 +9,7 @@
     <div class="notes-list">
         <app-note-card *ngFor="let note of notes, index as i" 
                         (delete) = "deleteNote(i)"
+                        routerLink = "/{{ i }}"
                         [@itemAnimate]
                         [title]="note.title" 
                         [body]="note.body"></app-note-card>
