@@ -2,14 +2,14 @@
 
   <form [formGroup]= "form">
 
-    <mat-form-field appearance="fill">
+    <mat-form-field>
         <mat-label>Título</mat-label>
-        <input type="text" matInput formControlName="title">
+        <input type="text" name="title" matInput formControlName="title">
       </mat-form-field>
     
-      <mat-form-field appearance="fill">
+      <mat-form-field>
         <mat-label>Anotação</mat-label>
-        <textarea matInput formControlName="body"></textarea>
+        <textarea matInput name="body" formControlName="body"></textarea>
       </mat-form-field>
     
   </form>
