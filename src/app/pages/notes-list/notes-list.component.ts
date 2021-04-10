@@ -67,6 +67,7 @@ export class NotesListComponent implements OnInit {
 
   deleteNote(id: number): void {
     this.notesService.delete(id);
+    this.notesService.showMessage('Nota removida!');
   }
 
 }
