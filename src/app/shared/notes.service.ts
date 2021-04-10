@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Note } from 'src/models/notes.model';
 
 @Injectable({
@@ -8,7 +9,15 @@ export class NotesService {
 
   public notes: Note[] = [];
 
-  constructor() { }
+  constructor(private snackBar: MatSnackBar) { }
+
+  showMessage(msg: string): void {
+    this.snackBar.open(msg, 'X', {
+      duration: 3000,
+      horizontalPosition: 'right',
+      verticalPosition: 'top'
+    });
+  }
 
   get(id: number): any {
     return this.notes[id];
@@ -19,13 +28,14 @@ export class NotesService {
   }
 
   getAll(): any {
-    return this.notes;
+    return this.load();
   }
 
   add(title: string, body: string): any {
     // save a note in the array and returns the id of the note
     const newLength = this.notes.push(new Note(title, body));
     const index = newLength - 1;
+    this.save();
     return index;
   }
 
@@ -33,9 +43,25 @@ export class NotesService {
     const note = this.notes[id];
     note.title = title;
     note.body = body;
+    this.save();
   }
 
   delete(id: number): any {
     this.notes.splice(id, 1);
+    this.save();
+  }
+
+  save(): void {
+    const data = JSON.stringify(this.notes);
+    localStorage.setItem('notes', data);
+  }
+
+  load(): any {
+    const data = localStorage.getItem('notes');
+    if (data) {
+      return this.notes = JSON.parse(data);
+    } else{
+      return this.notes = [];
+    }
   }
 }
