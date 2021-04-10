@@ -36,10 +36,10 @@ export class UpdateNoteComponent implements OnInit {
   ngOnInit(): void {
     // tslint:disable-next-line: deprecation
     this.route.params.subscribe((params: Params) => {
-      this.note = Note[params.id];
       if (params.id) {
         this.note = this.notesService.get(params.id);
         this.noteId = params.id;
+        console.log(this.note);
       }
     });
   }
@@ -49,5 +49,6 @@ export class UpdateNoteComponent implements OnInit {
     const body = this.form.controls.body.value;
     this.notesService.update(this.noteId, title, body);
     this.router.navigateByUrl('/');
+    this.notesService.showMessage('Nota atualizada com sucesso!');
   }
 }
