@@ -43,6 +43,7 @@ export class FormDialogComponent implements OnInit {
     this.notesService.add(title, body);
     this.dialogRef.close();
     this.form.reset();
+    this.notesService.showMessage('Nota salva com sucesso!');
   }
 
 }
