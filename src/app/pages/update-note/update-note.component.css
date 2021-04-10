@@ -1,5 +1,28 @@
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
+.updateContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1{
+  color: #fff;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  min-width: 300px;
+  max-width: 400px;
+  width: 100%;
+}
+.mat-inputs{
+  width: 100%;
+}
+
+input[type="text"], textarea {
+  color : #d1d1d1; 
+}
+
+button:first-child{
+  margin-right: .5rem;
+}
