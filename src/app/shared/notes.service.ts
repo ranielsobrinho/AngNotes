@@ -14,8 +14,8 @@ export class NotesService {
   showMessage(msg: string): void {
     this.snackBar.open(msg, 'X', {
       duration: 3000,
-      horizontalPosition: 'right',
-      verticalPosition: 'top'
+      horizontalPosition: 'center',
+      verticalPosition: 'bottom'
     });
   }
 
