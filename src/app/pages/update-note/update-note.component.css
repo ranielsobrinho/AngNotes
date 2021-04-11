@@ -5,6 +5,8 @@
 }
 
 h1{
+  display: flex;
+  align-items: center;
   color: #fff;
 }
 
@@ -25,4 +27,10 @@ input[type="text"], textarea {
 
 button:first-child{
   margin-right: .5rem;
+}
+
+@media(max-width: 700px){
+  form{
+    width: 90%;
+  }
 }

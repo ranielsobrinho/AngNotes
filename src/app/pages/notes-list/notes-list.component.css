@@ -12,7 +12,32 @@
     width: 500px;
 }
 
+input[type="text"] {
+    color : #d1d1d1; 
+}
+
 app-note-card{
     display: block;
     margin-bottom: 10px;
+}
+
+p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+@media (max-width: 700px){
+    .main-container{
+        margin: 0 5px;
+        font-size: .8rem;
+    }
+
+    .input{
+        width: 100%;
+    }
 }

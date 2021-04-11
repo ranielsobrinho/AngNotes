@@ -10,6 +10,13 @@
 }
 .title{
     font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.mat-raised-button{
+    display: flex;
+    align-items: center;
 }
 
 .text{
@@ -24,4 +31,10 @@ mat-toolbar{
     display: flex;
     flex-direction: column;
     overflow-y: auto;
+}
+
+@media (max-width: 700px){
+    .title{
+        font-size: 1.2rem;
+    }
 }

@@ -6,3 +6,13 @@ form{
 .mat-inputs{
     width: 100%;
 }
+
+.mat-dialog-actions{
+    justify-content: center;
+}
+
+.mat-dialog-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
