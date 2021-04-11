@@ -2,16 +2,18 @@
     <div class="search-bar-container">
         <mat-form-field  class="input">
             <mat-label>Pesquise uma nota aqui...</mat-label>
-            <input matInput>
+            <input type="text" matInput (keyup)="filterNote($event.target.value)">
         </mat-form-field>
     </div>
 
     <div class="notes-list">
-        <app-note-card *ngFor="let note of notes, index as i" 
+        <app-note-card *ngFor="let note of filteredNotes, index as i" 
                         (delete) = "deleteNote(i)"
                         routerLink = "/{{ i }}"
                         [@itemAnimate]
                         [title]="note.title" 
-                        [body]="note.body"></app-note-card>
+                        [body]="note.body">
+                    </app-note-card>
+        <p *ngIf="notes.length === 0">Não há notas salvas</p>
     </div>
 </div>
