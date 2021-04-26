@@ -2,14 +2,14 @@
     display: flex;
     flex-direction: column;
 
-    max-width: 500px;
+    max-width: 31.25rem;
 
     margin: auto;
     padding-top: 2rem;
 }
 
 .input{
-    width: 500px;
+    width: 31.25rem; /* equivale a 500px */
 }
 
 input[type="text"] {
