@@ -37,9 +37,8 @@ export class UpdateNoteComponent implements OnInit {
     // tslint:disable-next-line: deprecation
     this.route.params.subscribe((params: Params) => {
       if (params.id) {
-        this.note = this.notesService.get(params.id);
         this.noteId = params.id;
-        console.log(this.note);
+        this.note = this.notesService.get(params.id);
       }
     });
   }
