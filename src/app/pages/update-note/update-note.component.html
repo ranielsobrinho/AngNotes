@@ -1,19 +1,19 @@
 <div class="updateContainer">
   <h1>Alterar Anotação <mat-icon>assignment_turned_in</mat-icon></h1>
   
-    <form [formGroup]= "form">
-  
+  <form [formGroup]= "form">
+
+    <mat-form-field>
+        <mat-label>Título</mat-label>
+        <input type="text" name="title" [ngModel]="note.title" matInput placeholder="" formControlName="title">
+      </mat-form-field>
+    
       <mat-form-field>
-          <mat-label>Título</mat-label>
-          <input type="text" name="title" [ngModel]="note.title" matInput placeholder="" formControlName="title">
-        </mat-form-field>
-      
-        <mat-form-field>
-          <mat-label>Anotação</mat-label>
-          <textarea matInput name="body" [ngModel]="note.body" formControlName="body"></textarea>
-        </mat-form-field>
-      
-    </form>
+        <mat-label>Anotação</mat-label>
+        <textarea matInput name="body" [ngModel]="note.body" formControlName="body"></textarea>
+      </mat-form-field>
+    
+  </form>
   
   <div>
     <button mat-stroked-button routerLink="/" color="warn">Cancelar</button>
