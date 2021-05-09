@@ -2,7 +2,7 @@
 
 A simple notes app with Angular, Angular Material and firebase
 
-[See my app here](https://angnotes-5dcfe.web.app/)
+[See my app here](https://angnotes.herokuapp.com/)
 
 ***
 
@@ -17,7 +17,7 @@ A simple notes app with Angular, Angular Material and firebase
 
 - ✔️ TypeScript
 
-- ✔️ Firebase
+- ✔️ Deploy on Heroku
 
 - ✔️ Angular Material
 
